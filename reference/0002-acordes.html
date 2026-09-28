@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Folha de Acordes</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/keyboard.js"></script>
+</head>
+<body>
+<main>
+<div class="kicker">Referência · cresce a cada lição</div>
+<h1>Acordes</h1>
+
+<h2>Melodia × acorde</h2>
+<table>
+<tr><th>Melodia</th><td>notas <strong>uma depois da outra</strong>: o que a voz canta</td></tr>
+<tr><th>Acorde</th><td>3 ou mais notas <strong>ao mesmo tempo</strong>: o que o teclado toca por baixo</td></tr>
+</table>
+
+<h2>Como montar (tríade)</h2>
+<div class="callout">
+<p>Escolha a nota que dá nome ao acorde (a <strong>fundamental</strong>) e vá pelas brancas: <strong>uma sim, uma não</strong>.<br>
+Mão direita: dedos <strong>1 · 3 · 5</strong> (polegar · médio · mindinho).</p>
+</div>
+
+<h2>Acordes aprendidos</h2>
+
+<h3>C: Dó maior = Dó + Mi + Sol</h3>
+<div id="kb-c"></div>
+<p class="small">Em “Sonda-me, Usa-me”: introdução, “Sonda-me, Senhor”, “Como farol…”, “Eu quero ser usado”.</p>
+
+<footer class="nav">
+<span><a href="../index.html">← Início</a> · <a href="../lessons/0002-o-acorde-de-do.html">Lição 2</a></span>
+<span class="small">Fontes: <a href="https://pt.wikipedia.org/wiki/Acorde">Wikipédia: Acorde</a> · <a href="https://www.piano-keyboard-guide.com/piano-chord-fingering-which-fingers-to-use-when-playing-chords/">Piano Keyboard Guide</a> · <a href="https://www.cifraclub.com.br/aline-barros/sonda-me-usa-me/">Cifra Club</a></span>
+</footer>
+</main>
+<script>
+const kb = PianoKeyboard.create(document.getElementById("kb-c"), { start: 60, octaves: 1, labels: "solfege" });
+[60, 64, 67].forEach((m) => kb.mark(m, "on"));
+kb.setLabel(60, "Dó\n1"); kb.setLabel(64, "Mi\n3"); kb.setLabel(67, "Sol\n5");
+</script>
+</body>
+</html>

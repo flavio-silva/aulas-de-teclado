@@ -4,9 +4,11 @@
  *     start: 48,            // nota MIDI da primeira tecla (48 = Dó; 60 = Dó central)
  *     octaves: 2,           // quantas oitavas desenhar
  *     labels: "none",       // "none" | "solfege" (Dó Ré...) | "letters" (C D...) | "both"
+ *     mode: "play",         // "play" | "select" (cada toque marca/desmarca a tecla, para montar acordes)
  *     onPress: (info) => {} // info = { midi, name, letter, isBlack }
  *   });
  *   kb.mark(midi, "ok" | "bad" | "hint" | "on");  kb.clear();  kb.play(midi);  kb.chord([60,64,67]);
+ *   kb.selected()  // modo "select": [midi, ...] das teclas marcadas
  */
 (function () {
   const SOLFEGE = ["Dó", "Dó♯", "Ré", "Ré♯", "Mi", "Fá", "Fá♯", "Sol", "Sol♯", "Lá", "Lá♯", "Si"];
@@ -27,7 +29,7 @@
     const f = 440 * Math.pow(2, (midi - 69) / 12);
     const out = ac.createGain();
     out.gain.setValueAtTime(0.0001, t);
-    out.gain.exponentialRampToValueAtTime(0.28, t + 0.01);
+    out.gain.exponentialRampToValueAtTime(0.18, t + 0.01);
     out.gain.exponentialRampToValueAtTime(0.0001, t + dur);
     out.connect(ac.destination);
     [[1, 1], [2, 0.35], [3, 0.12], [4, 0.06]].forEach(([mult, amp]) => {
@@ -82,6 +84,7 @@
       el.addEventListener("pointerdown", (e) => {
         e.preventDefault();
         play(m);
+        if (opts.mode === "select") el.classList.toggle("pk-on");
         el.classList.add("pk-down");
         setTimeout(() => el.classList.remove("pk-down"), 160);
         opts.onPress && opts.onPress(i);
@@ -97,6 +100,8 @@
       mark(midi, cls) { keys.get(midi)?.classList.add("pk-" + cls); },
       unmark(midi, cls) { keys.get(midi)?.classList.remove("pk-" + cls); },
       clear() { keys.forEach((el) => el.classList.remove("pk-ok", "pk-bad", "pk-hint", "pk-on")); },
+      // modo "select": teclas marcadas (pk-on), da mais grave para a mais aguda
+      selected() { return [...keys].filter(([, el]) => el.classList.contains("pk-on")).map(([m]) => m); },
       setLabel(midi, text) { const l = keys.get(midi)?.querySelector(".pk-label"); if (l) l.textContent = text; },
       whites,
     };

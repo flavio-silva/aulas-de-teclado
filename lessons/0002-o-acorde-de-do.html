@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lição 2 · O Acorde de Dó</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/keyboard.js"></script>
+<script src="../assets/quiz.js"></script>
+</head>
+<body>
+<main>
+
+<div class="kicker">Lição 2 · Teclado para a igreja · ~15 min</div>
+<h1>Seu primeiro acorde: C</h1>
+<p class="lede">Na igreja, quem toca teclado raramente toca a melodia: toca os <em>acordes</em>, e a voz canta por cima. Hoje você aprende o primeiro deles.</p>
+
+<div class="callout">
+<p><strong>Por que o C?</strong> Ele é o acorde que mais aparece em “Sonda-me, Usa-me”: abre a introdução e volta em “<em>Sonda-me, Senhor</em>”, “<em>Como farol que brilha à noite</em>” e “<em>Eu quero ser usado</em>”.<sup class="cite"><a href="#s1">[1]</a></sup> Dominando o C, você já tem a “casa” da música.</p>
+</div>
+
+<div class="task">
+<h3>Aquecimento: lembra da Lição 1?</h3>
+<p class="small">Sem nomes nas teclas. Ache a nota pedida. Se travar, lembre-se: o Dó fica à esquerda das <strong>duas</strong> pretas.</p>
+<p><strong id="wu-target" style="font-size:1.3rem">…</strong></p>
+<div id="kb-warmup"></div>
+<p class="status" id="wu-status" aria-live="polite"></p>
+</div>
+
+<h2>1. Melodia × acorde</h2>
+<p>A <strong>melodia</strong> é uma sequência de notas, <em>uma depois da outra</em>, que a gente percebe como uma coisa só:<sup class="cite"><a href="#s2">[2]</a></sup> é aquilo que você canta. O <strong>acorde</strong> é um grupo de três ou mais notas soando <em>ao mesmo tempo</em>.<sup class="cite"><a href="#s3">[3]</a></sup> É o “tapete” que sustenta a voz.</p>
+
+<div class="task">
+<h3>Ouça a diferença</h3>
+<p class="small">As mesmas três notas: Dó, Mi e Sol. Primeiro uma de cada vez, depois todas juntas.</p>
+<div id="kb-demo"></div>
+<div class="row">
+<button id="demo-mel">▶ Uma de cada vez</button>
+<button class="primary" id="demo-chord">▶ Todas juntas (acorde)</button>
+</div>
+</div>
+
+<h2>2. A forma do acorde: “uma sim, uma não”</h2>
+<p>O acorde mais simples tem 3 notas e se chama <strong>tríade</strong>.<sup class="cite"><a href="#s3">[3]</a></sup> Para montá-lo, você escolhe uma tecla branca e vai pulando uma:</p>
+<p style="text-align:center;font-size:1.2rem"><span class="note-name">Dó</span> <span class="small">(pula Ré)</span> <span class="note-name">Mi</span> <span class="small">(pula Fá)</span> <span class="note-name">Sol</span></p>
+<p>A nota de baixo, a mais grave, é a que dá <strong>nome</strong> ao acorde: ela se chama <em>fundamental</em>.<sup class="cite"><a href="#s3">[3]</a></sup> Como aqui a de baixo é o Dó, o acorde se chama <strong>Dó</strong>, e na cifra se escreve <strong>C</strong>.</p>
+
+<h2>3. Os dedos: 1, 3 e 5</h2>
+<p>No teclado, os dedos têm números. Em cada mão, o <strong>polegar é 1</strong> e o <strong>mindinho é 5</strong>.<sup class="cite"><a href="#s4">[4]</a></sup></p>
+<p style="text-align:center;font-family:var(--sans)">polegar <strong>1</strong> · indicador <strong>2</strong> · médio <strong>3</strong> · anelar <strong>4</strong> · mindinho <strong>5</strong></p>
+<p>Na mão direita, o acorde de três notas é tocado com os dedos <strong>1, 3 e 5</strong>:<sup class="cite"><a href="#s4">[4]</a></sup> o polegar no Dó, o médio no Mi e o mindinho no Sol. Os dedos 2 e 4 ficam “flutuando” sobre as teclas puladas.</p>
+
+<div class="callout">
+<p><strong>Sem teclado ainda? Treine na mesa.</strong></p>
+<ol style="margin:.3rem 0 0">
+<li>Apoie a mão direita na mesa, relaxada e com os dedos curvados, como se segurasse uma laranja.</li>
+<li>Bata juntos os dedos <strong>1, 3 e 5</strong>, e os três devem tocar a mesa ao mesmo tempo.</li>
+<li>Levante e repita 10 vezes, devagar. O 2 e o 4 não encostam.</li>
+</ol>
+</div>
+
+<h2>Agora é com você</h2>
+
+<div class="task">
+<h3>Desafio 1: monte o C</h3>
+<p>Este teclado funciona diferente: cada toque <strong>marca</strong> uma tecla, e tocar de novo desmarca. Marque as três notas do C (em qualquer altura do teclado) e aperte <strong>Tocar juntas</strong>.</p>
+<div id="kb-build"></div>
+<div class="row">
+<button class="primary" id="build-play">▶ Tocar juntas</button>
+<button id="build-reset">Limpar</button>
+</div>
+<p class="status" id="build-status" aria-live="polite"></p>
+</div>
+
+<div class="task">
+<h3>Desafio 2: ouvido e memória</h3>
+<p class="small">Algumas perguntas pedem para ouvir. As outras são de memória: tente não rolar para cima.</p>
+<div id="quiz"></div>
+</div>
+
+<div class="task" style="border-color:var(--accent)">
+<h3>🎉 Vitória: toque e cante</h3>
+<p>Monte o C de novo, agora de memória. Depois aperte <strong>Tocar C</strong> e cante por cima: “<em>Son-da-me, Se-nhor…</em>”. Aperte de novo a cada vez que quiser renovar o som.</p>
+<div id="kb-win"></div>
+<div class="row">
+<button class="primary" id="win-play">▶ Tocar C</button>
+<button id="win-reset">Limpar</button>
+</div>
+<p class="status" id="win-status" aria-live="polite">Marque as três notas do C.</p>
+</div>
+
+<h2>Esta semana</h2>
+<ul>
+<li><strong>Hoje:</strong> esta lição, com os dedos na mesa, 10 vezes.</li>
+<li><strong>Daqui a 2 dias:</strong> refaça o aquecimento e o Desafio 2. Depois refaça o <a href="0001-encontre-o-do.html#quiz">quiz da Lição 1</a>: misturar as duas lições é de propósito.</li>
+<li><strong>Daqui a 4–5 dias:</strong> monte o C em outra altura do teclado, sem olhar a <a href="../reference/0002-acordes.html">folha de acordes</a>.</li>
+</ul>
+
+<h2>Para ir mais fundo</h2>
+<p><strong>Fonte principal recomendada:</strong> continue pelo <a href="https://www.churchofjesuschrist.org/music/accompanying-others/keyboard-course?lang=por">Curso de Teclado</a> (gratuito, em português). Se quiser ver o C desenhado com as outras posições dele, o <a href="https://www.pianochord.org/c-major.html">PianoChord.org</a> tem o diagrama (em inglês, mas as imagens falam por si).<sup class="cite"><a href="#s5">[5]</a></sup></p>
+
+<div class="callout ask">
+<p><strong>Ficou alguma dúvida?</strong> Pergunte ao Claude, seu professor neste curso. Por exemplo: “por que o acorde soa bonito?”, “posso usar outros dedos?”, “e a mão esquerda?”. Qualquer pergunta vale.</p>
+</div>
+
+<h3>Fontes</h3>
+<ol class="sources">
+<li id="s1"><a href="https://www.cifraclub.com.br/aline-barros/sonda-me-usa-me/">Cifra Club: “Sonda-me, Usa-me”, Aline Barros</a></li>
+<li id="s2"><a href="https://pt.wikipedia.org/wiki/Melodia">Wikipédia: Melodia</a></li>
+<li id="s3"><a href="https://pt.wikipedia.org/wiki/Acorde">Wikipédia: Acorde</a> (três ou mais notas simultâneas; tríade; fundamental)</li>
+<li id="s4"><a href="https://www.piano-keyboard-guide.com/piano-chord-fingering-which-fingers-to-use-when-playing-chords/">Piano Keyboard Guide: Piano Chord Fingering</a> (números dos dedos; 1-3-5), em inglês</li>
+<li id="s5"><a href="https://www.pianochord.org/c-major.html">PianoChord.org: C major</a>, em inglês</li>
+</ol>
+
+<footer class="nav">
+<a href="0001-encontre-o-do.html">← Lição 1: Encontre o Dó</a>
+<a href="../reference/0002-acordes.html">Folha de referência: acordes</a>
+<a href="../index.html">Início</a>
+</footer>
+
+</main>
+
+<script>
+const { create, info } = PianoKeyboard;
+const NAMES = ["Dó", "Ré", "Mi", "Fá", "Sol", "Lá", "Si"];
+const PCS = { "Dó": 0, "Ré": 2, "Mi": 4, "Fá": 5, "Sol": 7, "Lá": 9, "Si": 11 };
+const shuffle = (a) => a.map((v) => [Math.random(), v]).sort((x, y) => x[0] - y[0]).map((p) => p[1]);
+
+// Aquecimento: 5 notas sorteadas (revisão espaçada da Lição 1)
+const wuTarget = document.getElementById("wu-target");
+const wuStatus = document.getElementById("wu-status");
+let wuList, wuI;
+const kbW = create(document.getElementById("kb-warmup"), {
+  start: 48, octaves: 2,
+  onPress: (i) => {
+    if (wuI >= wuList.length) return;
+    const want = wuList[wuI];
+    if (i.pc === PCS[want]) {
+      kbW.mark(i.midi, "ok"); setTimeout(() => kbW.unmark(i.midi, "ok"), 600);
+      wuI++;
+      wuStatus.className = "status ok";
+      if (wuI === wuList.length) {
+        wuTarget.textContent = "Aquecimento completo ✓";
+        wuStatus.textContent = "Tudo certo! A memória da Lição 1 está firme.";
+        const again = document.createElement("button");
+        again.textContent = "Mais uma rodada";
+        again.onclick = () => { again.remove(); startWarmup(); };
+        wuStatus.after(again);
+      } else {
+        wuStatus.textContent = `Isso, ${want}!`;
+        wuTarget.textContent = `Ache o ${wuList[wuI]} (${wuI + 1} de ${wuList.length})`;
+      }
+    } else {
+      kbW.mark(i.midi, "bad"); setTimeout(() => kbW.unmark(i.midi, "bad"), 700);
+      wuStatus.className = "status bad";
+      wuStatus.textContent = `Essa é ${i.name}. Procure o ${want}.`;
+    }
+  },
+});
+function startWarmup() {
+  wuList = shuffle(NAMES).slice(0, 5); wuI = 0;
+  wuTarget.textContent = `Ache o ${wuList[0]} (1 de 5)`;
+  wuStatus.className = "status"; wuStatus.textContent = "";
+}
+startWarmup();
+
+// Demo melodia × acorde
+const C = [60, 64, 67];
+const demo = create(document.getElementById("kb-demo"), { start: 60, octaves: 1, labels: "solfege" });
+function flash(notes, ms) { notes.forEach((n) => demo.mark(n, "on")); setTimeout(() => demo.clear(), ms); }
+document.getElementById("demo-mel").onclick = () => {
+  C.forEach((n, k) => setTimeout(() => { demo.clear(); demo.mark(n, "on"); demo.play(n); }, k * 600));
+  setTimeout(() => demo.clear(), 2200);
+};
+document.getElementById("demo-chord").onclick = () => { demo.chord(C); flash(C, 1600); };
+
+// Verifica se as teclas marcadas formam o acorde C (tríade fechada, fundamental embaixo)
+function checkC(sel) {
+  const names = sel.map((m) => info(m).name).join(", ") || "nada";
+  if (sel.length !== 3) return { ok: false, msg: `Você marcou ${sel.length} tecla(s): ${names}. O acorde precisa de exatamente 3.` };
+  const [a, b, c] = sel;
+  if (a % 12 === 0 && b === a + 4 && c === a + 7) return { ok: true };
+  if (sel.every((m) => [0, 4, 7].includes(m % 12)))
+    return { ok: false, msg: `As notas são as do C (${names}), mas estão espalhadas. Coloque as três juntinhas: Dó, pula uma, Mi, pula uma, Sol.` };
+  return { ok: false, msg: `Você marcou ${names}. Comece no Dó (à esquerda das duas pretas) e vá pulando uma branca.` };
+}
+
+// Desafio 1: montar o C
+const bStatus = document.getElementById("build-status");
+const kbB = create(document.getElementById("kb-build"), { start: 48, octaves: 2, mode: "select" });
+document.getElementById("build-play").onclick = () => {
+  const sel = kbB.selected();
+  if (sel.length) kbB.chord(sel);
+  const r = checkC(sel);
+  bStatus.className = "status " + (r.ok ? "ok" : "bad");
+  bStatus.textContent = r.ok ? "É isso! Dó + Mi + Sol = C. Ouviu como soa “firme”, como um lar? 🎶" : r.msg;
+};
+document.getElementById("build-reset").onclick = () => { kbB.clear(); bStatus.textContent = ""; };
+
+// Desafio 2: quiz (ouvido + memória + revisão da Lição 1)
+// Botão de ouvir (sem tocar sozinho: o navegador só libera som após um clique)
+function listen(fn) {
+  return (el) => {
+    const b = document.createElement("button");
+    b.className = "primary";
+    b.textContent = "▶ Ouvir";
+    b.style.marginBottom = ".6rem";
+    b.onclick = fn;
+    el.appendChild(b);
+  };
+}
+const melodyOrChord = (asChord, notes) => ({
+  prompt: "Ouça: isso é uma melodia ou um acorde?",
+  options: ["Melodia", "Acorde"], answer: asChord ? "Acorde" : "Melodia",
+  explain: asChord ? "Notas ao mesmo tempo = acorde." : "Uma nota depois da outra = melodia.",
+  setup: listen(() => notes.forEach((n, k) => PianoKeyboard.play(n, asChord ? 0 : k * 0.45, asChord ? 2 : 0.8))),
+});
+Quiz.create(document.getElementById("quiz"), [
+  melodyOrChord(true, [60, 64, 67]),
+  melodyOrChord(false, [67, 65, 64, 62, 60]),
+  melodyOrChord(true, [65, 69, 72]),
+  { prompt: "Quais notas formam o acorde <strong>C</strong>?", options: ["Dó Mi Sol", "Dó Ré Mi", "Dó Fá Lá", "Ré Fá Lá"], answer: "Dó Mi Sol", explain: "Dó, pula uma, Mi, pula uma, Sol." },
+  { prompt: "Na mão direita, qual dedo toca o <strong>Mi</strong> do acorde C?", options: ["1", "2", "3", "4", "5"], answer: "3", explain: "Polegar (1) no Dó, médio (3) no Mi, mindinho (5) no Sol." },
+  { prompt: "O nome do acorde vem de qual das suas notas?", options: ["A mais grave", "A do meio", "A mais aguda"], answer: "A mais grave", explain: "A nota de baixo, a fundamental, dá o nome." },
+  { prompt: "Revisão: na cifra, <strong>E</strong> é qual nota?", options: NAMES, answer: "Mi", explain: "E = Mi. C D E: Dó Ré Mi." },
+  { prompt: "Revisão: na cifra, <strong>F</strong> é qual nota?", options: NAMES, answer: "Fá", explain: "F = Fá, à esquerda das três pretas." },
+]);
+
+// Vitória: montar de memória e cantar
+const winStatus = document.getElementById("win-status");
+const kbWin = create(document.getElementById("kb-win"), { start: 48, octaves: 2, mode: "select" });
+document.getElementById("win-play").onclick = () => {
+  const sel = kbWin.selected();
+  const r = checkC(sel);
+  if (sel.length) kbWin.chord(sel);
+  winStatus.className = "status " + (r.ok ? "ok" : "bad");
+  winStatus.innerHTML = r.ok
+    ? "<strong>Agora cante: “Son-da-me, Se-nhor…”</strong> Você está acompanhando a própria voz com um acorde. É isso que o tecladista faz no culto."
+    : r.msg;
+};
+document.getElementById("win-reset").onclick = () => { kbWin.clear(); winStatus.className = "status"; winStatus.textContent = "Marque as três notas do C."; };
+</script>
+</body>
+</html>
