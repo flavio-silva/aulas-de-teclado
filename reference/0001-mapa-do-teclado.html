@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa do Teclado</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/keyboard.js"></script>
+</head>
+<body>
+<main>
+<div class="kicker">Referência · para imprimir e deixar do lado do teclado</div>
+<h1>Mapa do teclado</h1>
+
+<div id="kb"></div>
+
+<h2>A regra de ouro</h2>
+<div class="callout">
+<p><strong>Dó</strong> = tecla branca à esquerda das <strong>2</strong> pretas.<br>
+<strong>Fá</strong> = tecla branca à esquerda das <strong>3</strong> pretas.</p>
+</div>
+
+<h2>Nomes e cifras</h2>
+<table>
+<tr><th>Nome</th><td>Dó</td><td>Ré</td><td>Mi</td><td>Fá</td><td>Sol</td><td>Lá</td><td>Si</td></tr>
+<tr><th>Cifra</th><td><strong>C</strong></td><td><strong>D</strong></td><td><strong>E</strong></td><td><strong>F</strong></td><td><strong>G</strong></td><td><strong>A</strong></td><td><strong>B</strong></td></tr>
+</table>
+<p class="small">Macete: o alfabeto começa no Lá (A = Lá, B = Si, C = Dó…). Depois do Si, recomeça no Dó, mais fino.</p>
+
+<h2>Primeiro acorde</h2>
+<p><strong>C</strong> (acorde de Dó) = <strong>Dó + Mi + Sol</strong>: uma branca sim, uma não. É o primeiro acorde de “Sonda-me, Usa-me”.</p>
+
+<footer class="nav">
+<span><a href="../index.html">← Início</a> · <a href="../lessons/0001-encontre-o-do.html">Lição 1</a></span>
+<span class="small">Fontes: <a href="https://pt.wikipedia.org/wiki/Nota_musical">Wikipédia</a> · <a href="https://wpe.hoffmanacademy.com/blog/resource/piano-keyboard-layout">Hoffman Academy</a></span>
+</footer>
+</main>
+<script>
+const kb = PianoKeyboard.create(document.getElementById("kb"), { start: 48, octaves: 2, labels: "both" });
+[48, 60, 72].forEach((m) => kb.mark(m, "on"));
+</script>
+</body>
+</html>

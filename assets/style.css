@@ -1,0 +1,78 @@
+/* Estilo base do curso: todas as lições e referências usam este arquivo. */
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;600&display=swap");
+
+:root {
+  --paper: #fffdf8;
+  --ink: #222;
+  --muted: #6b6b6b;
+  --rule: #e6e0d4;
+  --accent: #9a3b1b;      /* terracota */
+  --accent-soft: #f6e7df;
+  --ok: #2f7d4f;
+  --ok-soft: #e1f2e7;
+  --bad: #b3261e;
+  --bad-soft: #fbe3e1;
+  --hint: #e0a100;
+  --card: #fff;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: Inter, system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1b1a18; --ink: #ece8e1; --muted: #a39d93; --rule: #3a3631;
+    --accent: #e0896a; --accent-soft: #3a2a23; --card: #242220;
+    --ok: #6cc890; --ok-soft: #1f3327; --bad: #f08a80; --bad-soft: #3b2220;
+  }
+}
+
+* { box-sizing: border-box; }
+html { font-size: 19px; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--serif); line-height: 1.6;
+}
+main { max-width: 42rem; margin: 0 auto; padding: 3rem 16px 5rem; }
+
+h1 { font-size: 2.1rem; line-height: 1.15; margin: .2rem 0 .6rem; font-weight: 700; }
+h2 { font-size: 1.35rem; margin: 2.8rem 0 .6rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.05rem; margin: 1.8rem 0 .4rem; }
+p, li { hyphens: auto; }
+a { color: var(--accent); text-underline-offset: 2px; }
+.kicker { font-family: var(--sans); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.lede { font-size: 1.15rem; color: var(--muted); font-style: italic; }
+.small, cite, .cite { font-size: .8rem; color: var(--muted); font-style: normal; }
+sup.cite a { text-decoration: none; }
+.note-name { font-family: var(--sans); font-weight: 600; font-size: .9em; background: var(--accent-soft); color: var(--accent); padding: 0 .35em; border-radius: 4px; white-space: nowrap; }
+
+.callout { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: .8rem 1rem; margin: 1.4rem 0; border-radius: 0 6px 6px 0; }
+.callout p:first-child { margin-top: 0; } .callout p:last-child { margin-bottom: 0; }
+.ask { border-left-color: var(--hint); }
+
+.task { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 1.1rem 1.2rem; margin: 1.4rem 0; }
+.task h3 { margin-top: 0; }
+.status { font-family: var(--sans); font-size: .85rem; min-height: 1.4em; margin: .5rem 0 0; }
+.status.ok { color: var(--ok); } .status.bad { color: var(--bad); }
+
+button, .btn {
+  font-family: var(--sans); font-size: .85rem; cursor: pointer;
+  border: 1px solid var(--rule); background: var(--card); color: var(--ink);
+  padding: .45rem .9rem; border-radius: 6px;
+}
+button:hover { border-color: var(--accent); }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--rule); }
+th { font-family: var(--sans); font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+
+footer.nav { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: .85rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+ol.sources { font-size: .85rem; color: var(--muted); }
+
+@media print {
+  html { font-size: 12pt; }
+  main { max-width: none; padding: 0; }
+  .no-print, button { display: none !important; }
+  a { color: inherit; }
+  .task, .callout { break-inside: avoid; }
+}
