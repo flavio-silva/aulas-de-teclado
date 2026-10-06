@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lição 3 · Acordes F e G</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/keyboard.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/chords.js"></script>
+<style>
+  .lyric { font-size: 1.15rem; margin: .4rem 0; }
+  .lyric .chord { font-family: var(--sans); font-weight: 600; color: var(--accent); margin-right: .3rem; }
+  .lyric.now { background: var(--accent-soft); border-radius: 6px; padding: 0 .4rem; }
+  .lyric.done { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+
+<div class="kicker">Lição 3 · Teclado para a igreja · ~20 min</div>
+<h1>Mais dois acordes: F e G</h1>
+<p class="lede">Você já sabe montar o C. Hoje descobre que a <em>mesma forma de mão</em>, deslizada pelo teclado, cria dois acordes novos, e com os três você já toca um trecho de “Sonda-me”.</p>
+
+<div class="task">
+<h3>Aquecimento: o C de memória</h3>
+<p class="small">Cada toque marca uma tecla. Monte o C sem olhar a Lição 2 e aperte <strong>Tocar juntas</strong>.</p>
+<div id="kb-warmup"></div>
+<div class="row">
+<button class="primary" id="wu-play">▶ Tocar juntas</button>
+<button id="wu-reset">Limpar</button>
+</div>
+<p class="status" id="wu-status" aria-live="polite"></p>
+</div>
+
+<h2>1. A mesma forma, em outro lugar</h2>
+<p>Lembra da regra do acorde? Escolha a nota que dá o nome (a fundamental) e vá pelas brancas: <strong>uma sim, uma não</strong>.<sup class="cite"><a href="#s1">[1]</a></sup> Ela funciona começando em <em>qualquer</em> tecla branca. Começando no Fá e no Sol:</p>
+<table>
+<tr><th>Cifra</th><th>Nome</th><th>Notas</th><th>Dedos (mão direita)</th></tr>
+<tr><td><strong>C</strong></td><td>Dó maior</td><td>Dó · Mi · Sol</td><td>1 · 3 · 5</td></tr>
+<tr><td><strong>F</strong></td><td>Fá maior</td><td>Fá · Lá · Dó</td><td>1 · 3 · 5</td></tr>
+<tr><td><strong>G</strong></td><td>Sol maior</td><td>Sol · Si · Ré</td><td>1 · 3 · 5</td></tr>
+</table>
+<p>Repare: os dedos não mudam. A mão mantém o formato e <strong>desliza</strong> inteira para a direita. Do C para o F, o polegar anda do Dó até o Fá; do F para o G, só uma tecla.</p>
+
+<div class="task">
+<h3>Ouça os três</h3>
+<div id="kb-demo"></div>
+<div class="row">
+<button id="demo-c">▶ C</button>
+<button id="demo-f">▶ F</button>
+<button id="demo-g">▶ G</button>
+<button class="primary" id="demo-all">▶ C → F → G → C</button>
+</div>
+<p class="small">No último botão, preste atenção no fim: depois do G, voltar ao C soa como “chegar em casa”.</p>
+</div>
+
+<div class="callout">
+<p><strong>Dica de leitura da cifra.</strong> Na cifra de “Sonda-me” aparecem coisas como <strong>F9</strong>, <strong>C/E</strong>, <strong>F/A</strong> e <strong>G/B</strong>.<sup class="cite"><a href="#s2">[2]</a></sup> São versões “temperadas” dos acordes que você já conhece. Por enquanto, <strong>olhe só a primeira letra</strong>: F9 → toque F; C/E → toque C; G/B → toque G. Vai soar mais simples que o original, mas certo. Os temperos vêm em lições futuras.</p>
+</div>
+
+<h2>Agora é com você</h2>
+
+<div class="task">
+<h3>Desafio 1: monte o F e o G</h3>
+<p>Monte o acorde pedido e aperte <strong>Tocar juntas</strong>.</p>
+<p><strong id="b-target" style="font-size:1.3rem"></strong></p>
+<div id="kb-build"></div>
+<div class="row">
+<button class="primary" id="b-play">▶ Tocar juntas</button>
+<button id="b-reset">Limpar</button>
+</div>
+<p class="status" id="b-status" aria-live="polite"></p>
+</div>
+
+<div class="task">
+<h3>Desafio 2: que acorde é esse?</h3>
+<p class="small">Olhe as teclas destacadas, ou leia a pergunta, e responda. Tem revisão das lições anteriores no meio, de propósito.</p>
+<div id="quiz"></div>
+</div>
+
+<div class="task" style="border-color:var(--accent)">
+<h3>🎉 Vitória: um trecho de “Sonda-me”</h3>
+<p>Este é um trecho do refrão, com a cifra simplificada (só a primeira letra). Nas duas primeiras linhas o acorde troca no meio da frase.<sup class="cite"><a href="#s2">[2]</a></sup> Monte cada acorde na ordem e aperte <strong>Tocar</strong>. Quando acertar, o próximo se acende.</p>
+<div id="song"></div>
+<div id="kb-song"></div>
+<div class="row">
+<button class="primary" id="s-play">▶ Tocar</button>
+<button id="s-clear">Limpar teclas</button>
+<button id="s-restart">Recomeçar</button>
+</div>
+<p class="status" id="s-status" aria-live="polite"></p>
+</div>
+
+<h2>Esta semana</h2>
+<ul>
+<li><strong>Hoje:</strong> esta lição. Na mesa, treine a mão “deslizando” na forma 1-3-5: C → F → G → C, 5 vezes.</li>
+<li><strong>Daqui a 2 dias:</strong> refaça o aquecimento e o Desafio 2. Depois, o <a href="0002-o-acorde-de-do.html">aquecimento da Lição 2</a> (achar notas).</li>
+<li><strong>Daqui a 4–5 dias:</strong> faça a Vitória de novo, agora <strong>cantando</strong> cada linha enquanto toca o acorde.</li>
+</ul>
+
+<h2>Para ir mais fundo</h2>
+<p><strong>Fonte principal recomendada:</strong> siga no <a href="https://www.churchofjesuschrist.org/music/accompanying-others/keyboard-course?lang=por">Curso de Teclado</a> (gratuito, em português). Para ver F e G desenhados, o PianoChord.org tem os diagramas: <a href="https://www.pianochord.org/f-major.html">F</a> e <a href="https://www.pianochord.org/g-major.html">G</a> (em inglês, mas as imagens bastam).<sup class="cite"><a href="#s3">[3]</a></sup></p>
+
+<div class="callout ask">
+<p><strong>Ficou alguma dúvida?</strong> Pergunte ao Claude, seu professor neste curso. Por exemplo: “o que o 9 do F9 muda?”, “por que o G pede para voltar ao C?”, “como troco de acorde mais rápido?”.</p>
+</div>
+
+<h3>Fontes</h3>
+<ol class="sources">
+<li id="s1"><a href="https://pt.wikipedia.org/wiki/Acorde">Wikipédia: Acorde</a> (tríade: fundamental, terça e quinta)</li>
+<li id="s2"><a href="https://www.cifraclub.com.br/aline-barros/sonda-me-usa-me/">Cifra Club: “Sonda-me, Usa-me”, Aline Barros</a> (refrão: F9 C/E · F/A G/B · C G/B)</li>
+<li id="s3"><a href="https://www.pianochord.org/f-major.html">PianoChord.org: F major</a> e <a href="https://www.pianochord.org/g-major.html">G major</a>, em inglês</li>
+</ol>
+
+<footer class="nav">
+<a href="0002-o-acorde-de-do.html">← Lição 2: o acorde de Dó</a>
+<a href="../reference/0002-acordes.html">Folha de referência: acordes</a>
+<a href="../index.html">Início</a>
+</footer>
+
+</main>
+
+<script>
+const { create, info } = PianoKeyboard;
+const VOICING = { C: [60, 64, 67], F: [53, 57, 60], G: [55, 59, 62] };
+const shuffle = (a) => a.map((v) => [Math.random(), v]).sort((x, y) => x[0] - y[0]).map((p) => p[1]);
+
+// Teclado de montar acorde com botão "tocar" e verificação
+function chordBuilder(el, statusEl, getTarget, onOk) {
+  const kb = create(el, { start: 48, octaves: 2, mode: "select" });
+  return {
+    kb,
+    play() {
+      const sel = kb.selected();
+      if (sel.length) kb.chord(sel);
+      const r = Chords.check(sel, getTarget());
+      statusEl.className = "status " + (r.ok ? "ok" : "bad");
+      statusEl.textContent = r.ok ? "" : r.msg;
+      if (r.ok) onOk(sel);
+    },
+    reset() { kb.clear(); statusEl.className = "status"; statusEl.textContent = ""; },
+  };
+}
+
+// Aquecimento: C de memória (revisão da Lição 2)
+const wuStatus = document.getElementById("wu-status");
+const wu = chordBuilder(document.getElementById("kb-warmup"), wuStatus, () => "C",
+  () => wuStatus.textContent = "Isso! Dó + Mi + Sol. A memória da Lição 2 está firme.");
+document.getElementById("wu-play").onclick = wu.play;
+document.getElementById("wu-reset").onclick = wu.reset;
+
+// Demo
+const demo = create(document.getElementById("kb-demo"), { start: 48, octaves: 2, labels: "solfege" });
+function show(ch) { demo.clear(); VOICING[ch].forEach((m) => demo.mark(m, "on")); demo.chord(VOICING[ch]); }
+["c", "f", "g"].forEach((k) => document.getElementById("demo-" + k).onclick = () => show(k.toUpperCase()));
+document.getElementById("demo-all").onclick = () => {
+  ["C", "F", "G", "C"].forEach((ch, k) => setTimeout(() => show(ch), k * 1500));
+  setTimeout(() => demo.clear(), 6000);
+};
+
+// Desafio 1: F, G e uma mistura
+const bTarget = document.getElementById("b-target");
+const bStatus = document.getElementById("b-status");
+let bList, bI;
+const b = chordBuilder(document.getElementById("kb-build"), bStatus, () => bList[bI], () => {
+  bI++;
+  bStatus.className = "status ok";
+  if (bI === bList.length) {
+    bTarget.textContent = "Desafio completo ✓";
+    bStatus.textContent = "C, F e G dominados! A mesma forma de mão, três lugares diferentes.";
+    const again = document.createElement("button");
+    again.textContent = "Mais uma rodada";
+    again.onclick = () => { again.remove(); startBuild(); };
+    bStatus.after(again);
+  } else {
+    bStatus.textContent = "Certo! Agora o próximo.";
+    setTimeout(() => b.kb.clear(), 700);
+    bTarget.textContent = `Monte o ${bList[bI]} (${bI + 1} de ${bList.length})`;
+  }
+});
+document.getElementById("b-play").onclick = () => { if (bI < bList.length) b.play(); };
+document.getElementById("b-reset").onclick = () => { b.kb.clear(); };
+function startBuild() {
+  bList = ["F", "G"].concat(shuffle(["C", "F", "G"])); bI = 0;
+  b.reset();
+  bTarget.textContent = `Monte o ${bList[0]} (1 de ${bList.length})`;
+}
+startBuild();
+
+// Desafio 2: quiz
+const showChord = (ch) => (el) => {
+  const k = create(el, { start: 48, octaves: 2 });
+  VOICING[ch].forEach((m) => k.mark(m, "on"));
+};
+Quiz.create(document.getElementById("quiz"), [
+  { prompt: "Que acorde está destacado?", options: ["C", "F", "G"], answer: "F", explain: "Fá + Lá + Dó = F.", setup: showChord("F") },
+  { prompt: "Que acorde está destacado?", options: ["C", "F", "G"], answer: "G", explain: "Sol + Si + Ré = G.", setup: showChord("G") },
+  { prompt: "Que acorde está destacado?", options: ["C", "F", "G"], answer: "C", explain: "Dó + Mi + Sol = C.", setup: showChord("C") },
+  { prompt: "Quais notas formam o acorde <strong>G</strong>?", options: ["Sol Si Ré", "Sol Lá Si", "Fá Lá Dó", "Dó Mi Sol"], answer: "Sol Si Ré", explain: "Sol, pula Lá, Si, pula Dó, Ré." },
+  { prompt: "Quais notas formam o acorde <strong>F</strong>?", options: ["Fá Lá Dó", "Fá Sol Lá", "Sol Si Ré", "Dó Mi Sol"], answer: "Fá Lá Dó", explain: "Fá, pula Sol, Lá, pula Si, Dó." },
+  { prompt: "Na cifra aparece <strong>F9</strong>. Por enquanto, que acorde você toca?", options: ["C", "F", "G"], answer: "F", explain: "Olhe só a primeira letra: F." },
+  { prompt: "Na cifra aparece <strong>G/B</strong>. Por enquanto, que acorde você toca?", options: ["C", "F", "G"], answer: "G", explain: "A primeira letra manda: G." },
+  { prompt: "Mudando do C para o F, o que acontece com os dedos 1-3-5?", options: ["A mão desliza igual", "Os dedos trocam todos"], answer: "A mão desliza igual", explain: "Mesma forma, outro lugar." },
+  { prompt: "Revisão: o Fá fica à esquerda de qual grupo de pretas?", options: ["Grupo de 2", "Grupo de 3"], answer: "Grupo de 3", explain: "Fá: à esquerda das três pretas. Dó: das duas." },
+]);
+
+// Vitória: refrão simplificado (cifra original: F9 C/E | F/A G/B | C G/B)
+const SONG = [
+  { ch: "F", text: "Como abrigo no deserto" },
+  { ch: "C", text: "<span class=\"small\">(2º acorde da mesma linha)</span>" },
+  { ch: "F", text: "Como flecha que acerta o alvo" },
+  { ch: "G", text: "<span class=\"small\">(2º acorde da mesma linha)</span>" },
+  { ch: "C", text: "Eu quero ser usado" },
+];
+const songEl = document.getElementById("song");
+const sStatus = document.getElementById("s-status");
+let sI = 0;
+function renderSong() {
+  songEl.innerHTML = SONG.map((l, k) =>
+    `<p class="lyric ${k === sI ? "now" : k < sI ? "done" : ""}"><span class="chord">${l.ch}</span>${l.text}</p>`).join("");
+}
+const s = chordBuilder(document.getElementById("kb-song"), sStatus, () => SONG[sI].ch, () => {
+  sI++;
+  renderSong();
+  sStatus.className = "status ok";
+  if (sI === SONG.length) {
+    sStatus.innerHTML = "<strong>Você tocou um trecho de “Sonda-me”!</strong> Agora ouça tudo seguido e cante junto.";
+    const all = document.createElement("button");
+    all.className = "primary";
+    all.textContent = "▶ Ouvir o trecho e cantar";
+    all.onclick = () => SONG.forEach((l, k) => setTimeout(() => {
+      sI = k; renderSong(); s.kb.clear(); VOICING[l.ch].forEach((m) => s.kb.mark(m, "on")); s.kb.chord(VOICING[l.ch]);
+      if (k === SONG.length - 1) setTimeout(() => { sI = SONG.length; renderSong(); }, 2000);
+    }, k * 2000));
+    sStatus.after(all);
+  } else {
+    sStatus.textContent = `Isso! Agora o ${SONG[sI].ch}.`;
+    setTimeout(() => s.kb.clear(), 700);
+  }
+});
+document.getElementById("s-play").onclick = () => { if (sI < SONG.length) s.play(); };
+document.getElementById("s-clear").onclick = () => s.kb.clear();
+document.getElementById("s-restart").onclick = () => {
+  sI = 0; s.reset(); renderSong();
+  sStatus.nextElementSibling?.tagName === "BUTTON" && sStatus.nextElementSibling.remove();
+};
+renderSong();
+</script>
+</body>
+</html>
